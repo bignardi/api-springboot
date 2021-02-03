@@ -1,5 +1,5 @@
 #  In construction... 👷‍♂️
-Projeto API REST com Spring Boot e banco de dados NoSQL MongoDB
+REST API project with Spring Boot and NoSQL MongoDB database
 
 
 <h4 align="left">Languages and Tools:</h4>
