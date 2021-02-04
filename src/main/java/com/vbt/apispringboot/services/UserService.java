@@ -1,12 +1,14 @@
 package com.vbt.apispringboot.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.vbt.apispringboot.domain.User;
 import com.vbt.apispringboot.repository.UserRepository;
+import com.vbt.apispringboot.services.exception.ObjectNotFoundException;
 
 @Service
 public class UserService {
@@ -14,8 +16,13 @@ public class UserService {
 	// Dependency Injection
 	@Autowired
 	private UserRepository repo;
-	
+
 	public List<User> findAll() {
 		return repo.findAll();
+	}
+
+	public User findById(String id) {
+		Optional<User> obj = repo.findById(id);
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Object not found"));
 	}
 }
