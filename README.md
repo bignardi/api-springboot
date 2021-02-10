@@ -28,7 +28,7 @@ The **API SPRING BOOT** is an application for users who post and these posts hav
 - NoSql MongoDB database
 
 ## :wrench: Tools
-- Spring Tool Suit 4
+- Spring Tool Suite 4
 - MongoDB Compass
 - AWS Amazon
 - Postman
